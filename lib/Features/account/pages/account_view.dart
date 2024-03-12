@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mira_saving_app/Features/Home/widgets/account_settings_item.dart';
-import 'package:mira_saving_app/Features/Home/widgets/account_toggles.dart';
-import 'package:mira_saving_app/features/account/Widgets/account_setting_2.dart';
+import 'package:mira_saving_app/Features/account/Widgets/account_toggles.dart';
+import 'package:mira_saving_app/Features/account/Widgets/account_setting_2.dart';
 
 import '../Widgets/account_setting_1.dart';
+import '../Widgets/account_toggles.dart';
 class AccountView extends StatelessWidget {
   const AccountView({super.key});
 

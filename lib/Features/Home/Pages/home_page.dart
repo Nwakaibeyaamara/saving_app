@@ -1,14 +1,14 @@
 
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mira_saving_app/Features/Home/Pages/Home_view.dart';
 import 'package:mira_saving_app/Features/Home/bloc/home_bloc.dart';
 import 'package:mira_saving_app/Features/Home/bloc/home_state.dart';
-import 'package:mira_saving_app/account_view.dart';
-import 'package:mira_saving_app/invest_view.dart';
 import 'package:mira_saving_app/Features/Saving/Pages/Saving_view.dart';
+
+import '../../Invest/Pages/Invest_view.dart';
+import '../../account/pages/account_view.dart';
 class HomePage extends StatefulWidget{
 @override
 State<HomePage> createState() => _HomePageState();

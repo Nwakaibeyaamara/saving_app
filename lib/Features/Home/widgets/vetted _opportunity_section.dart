@@ -69,6 +69,7 @@ class VOitem extends StatelessWidget {
               "assets/images/invest_img.png",
             width: 152,
           ),
+          SizedBox(width: 8,),
           Text(
               "Coperate Debt",
             style: TextStyle(

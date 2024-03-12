@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../Features/Home/widgets/account_settings_item.dart';
+import '../../../Features/account/Widgets/account_settings_item.dart';
 
 class AccountSetting2 extends StatelessWidget {
   const AccountSetting2({
