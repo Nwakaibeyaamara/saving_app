@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mira_saving_app/Features/Saving/Pages/quick_save_page.dart';
 import 'package:mira_saving_app/features/Saving/Widget/strict_saving_section.dart';
 import 'package:mira_saving_app/Features/Home/widgets/saving_details_card.dart';
 import 'package:mira_saving_app/Features/Saving/Widget/flexible_saving_section.dart';
@@ -32,6 +33,14 @@ class  SavingView extends StatelessWidget {
               backgroundColor: Colors.black,
               shape: StadiumBorder(),
             ),
+            onClick: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context){
+                  return QuickSavePage();
+              }),
+              );
+            },
     ),
           StrictSavingsSection(),
           FlexibleSavingsSection(),

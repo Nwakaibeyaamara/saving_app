@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mira_saving_app/Features/Home/Pages/explore_investment.dart';
 
 class VettedOpportunitiesSection extends StatelessWidget {
   const VettedOpportunitiesSection({super.key});
@@ -23,7 +24,14 @@ class VettedOpportunitiesSection extends StatelessWidget {
                     ),
                 ),
                 TextButton(
-                    onPressed: () {} ,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder:(context){
+                            return ExploreInvestmentsPage();
+                      })
+                      );
+                    } ,
                     child:Row(
                       children: [
                         Text("Find more"),

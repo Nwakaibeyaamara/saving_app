@@ -30,10 +30,7 @@ Widget build(BuildContext context){
   var selectedIndex =homeState.tabIndex;
 
 return Scaffold(
-body: IndexedStack(
-  children: listOfPages,
-  index: selectedIndex,
-),
+body: listOfPages[selectedIndex],
 bottomNavigationBar: BottomNavigationBar(
 currentIndex: selectedIndex,
 unselectedItemColor: Colors.black,

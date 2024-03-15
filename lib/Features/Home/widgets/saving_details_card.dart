@@ -3,17 +3,21 @@ import 'package:flutter/material.dart';
 class SavingDetailCard extends StatelessWidget {
   const SavingDetailCard({
     super.key,
-    required this.topRightWidget, required this.balance,
+    required this.topRightWidget, required this.balance, this.onClick,
   });
 final Widget topRightWidget;
 final String balance;
+final Function ()? onClick;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(16.0)
-      ),
+    return GestureDetector(
+      onTap: onClick,
+      behavior: HitTestBehavior.translucent,
+      child :Container(
+        decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(16.0)
+        ),
       padding: EdgeInsets.all(16.0),
       height: 160,
       child: Stack(
@@ -27,7 +31,9 @@ final String balance;
                   horizontal: 4,
                 ),
                 backgroundColor: Colors.yellow.shade900,
-                foregroundColor: Colors.white
+                foregroundColor: Colors.white,
+                disabledBackgroundColor: Colors.yellow.shade800,
+              disabledForegroundColor: Colors.black
             ),
           ),
           Positioned(
@@ -54,6 +60,7 @@ final String balance;
           )
         ],
       ),
+      )
     );
   }
 }

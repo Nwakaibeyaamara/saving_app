@@ -1,31 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:mira_saving_app/Features/Home/widgets/my_todo_item.dart';
+import 'hide_todo_sheet.dart';
 
 class MyTodoSection extends StatelessWidget {
-  const MyTodoSection({
-    super.key,
-  });
+  const MyTodoSection({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+        return Container(
       padding: EdgeInsets.symmetric(vertical: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          //Header Row Start
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "My Todo",
                 style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.black38
+                  fontSize: 16,
+                  color: Colors.black38,
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    showDragHandle: true,
+                    builder: (context) {
+                      return HideTodoSheet();
+                    },
+                  );
+                },
                 child: Row(
                   children: [
                     Text(
@@ -36,13 +43,13 @@ class MyTodoSection extends StatelessWidget {
                       Icons.arrow_forward_ios,
                       size: 18,
                       color: Colors.red.shade700,
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
-          //ListView Start
+          // ListView Start
           SizedBox(
             height: 140,
             child: ListView(
@@ -63,15 +70,16 @@ class MyTodoSection extends StatelessWidget {
                   title: "Enable face id/fingerprint",
                   progress: 0,
                   onPressed: () {
+
                   },
                 ),
                 MyTodoItem(
                   title: "Add a Picture",
                   progress: 0,
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

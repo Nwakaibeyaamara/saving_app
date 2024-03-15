@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:mira_saving_app/Features/Home/widgets/my_todo_section.dart';
 import 'package:mira_saving_app/Features/Home/widgets/top_savings_section.dart';
 import 'package:mira_saving_app/Features/Home/widgets/vetted%20_opportunity_section.dart';
+import 'package:mira_saving_app/Features/Invest/Widgets/invest_details_card.dart';
 
 import '../widgets/suggestions_section.dart';
 import '../widgets/saving_details_card.dart';
+import '../widgets/user_balance_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,9 +16,10 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Hello Mira",
+            Text(
+              "Hello Mira",
               style: TextStyle(
                   fontWeight: FontWeight.bold
               ),
@@ -41,26 +44,8 @@ class HomeView extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16.4),
         children: [
-          SavingDetailCard(
-            balance: '\$20000',
-            topRightWidget: ElevatedButton(
-              onPressed:() {},
-              child:Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text("View savings"),
-                  Icon(Icons.arrow_forward),
-                ],
-              ),
-      style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(
-            vertical: 0,
-            horizontal: 8,
-          )
-      ),
-    ),
+          UserBalanceCard(),
 
-          ),
           MyTodoSection(),
           TopSavingsSection(),
           SuggesionsSection(),
@@ -77,4 +62,5 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
 

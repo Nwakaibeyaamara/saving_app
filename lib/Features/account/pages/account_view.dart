@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mira_saving_app/Features/account/Widgets/account_grid.dart';
 import 'package:mira_saving_app/Features/account/Widgets/account_toggles.dart';
 import 'package:mira_saving_app/Features/account/Widgets/account_setting_2.dart';
 
@@ -42,6 +43,7 @@ class AccountView extends StatelessWidget {
         padding: EdgeInsets.only(bottom: 16),
         children: [
           AccountToggles(),
+          AccountGrid(),
           AccountView(),
           AccountSetting1(),
           SizedBox(height: 16,),
